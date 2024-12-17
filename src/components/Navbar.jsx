@@ -44,7 +44,7 @@ export default function Navbar () {
           </li>
           <li>
             <a
-              href='/AboutPage'
+              href='/AboutPage.jsx'
               className='hover:text-gold transition duration-300'
             >
               À propos
@@ -52,7 +52,7 @@ export default function Navbar () {
           </li>
           <li>
             <a
-              href='/Portfolio'
+              href='/Portfolio.jsx'
               className='hover:text-gold transition duration-300'
             >
               Portfolio
@@ -60,7 +60,7 @@ export default function Navbar () {
           </li>
           <li>
             <a
-              href='/ContactForm'
+              href='/ContactForm.jsx'
               className='hover:text-gold transition duration-300'
             >
               Contact

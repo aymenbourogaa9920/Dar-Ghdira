@@ -22,7 +22,7 @@ export default function Navbar () {
 
   return (
     // className="navbar h-16 bg-white fixed top-0 left-0 w-full z-10 shadow-md"
-    <nav className='fixed top-0 left-0 w-full bg-beige bg-opacity-90 z-50 shadow-md'>
+    <nav className='fixed top-0 left-0 w-full bg-beige bg-opacity-90 z-50 shadow-md mb-50'>
       <div className='container mx-auto px-4 py-3 flex items-center justify-between'>
         {/* Logo animé */}
         <animated.div style={logoAnimation}>

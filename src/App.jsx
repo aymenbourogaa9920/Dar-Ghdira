@@ -10,9 +10,23 @@ import AboutPage from './pages/AboutPage';
 // import PortfolioPage from './pages/PortfolioPage';
 import Portfolio from './pages/Portfolio';
 import ContactForm from './pages/ContactForm';
+import { useEffect } from 'react';
+import backgroundAudio from './assets/audio/sayari dar ghdira_01.wav'
 
 function App() {
- 
+  
+  useEffect(() => {
+    // Vérifier si l'audio a déjà été joué en localStorage
+    const hasPlayedAudio = localStorage.getItem('hasPlayedAudio');
+
+    if (!hasPlayedAudio) {
+      const audio = new Audio(backgroundAudio);
+      audio.play().catch((err) => console.error("Audio playback error:", err));
+      
+      // Marquer l'audio comme joué
+      localStorage.setItem('hasPlayedAudio', 'true');
+    }
+  }, []);
 
   return (
     <>

@@ -36,7 +36,7 @@ const ExperienceCard = ({ experience }) => {
   return (
     <animated.div
       style={cardHover}
-      className="relative bg-black text-white rounded-lg p-8 transform transition duration-300 hover:bg-gray-900 hover:scale-105 flex flex-col justify-between"
+      className="relative bg-black bg-opacity-70 text-white rounded-lg p-8 transform transition duration-300 hover:bg-gold hover:scale-105 flex flex-col justify-between"
     >
       <div className="flex justify-center mb-4">
         {experience.icon}
@@ -56,11 +56,11 @@ const ExperienceCard = ({ experience }) => {
 
 export default function ExperienceSelector() {
   return (
-    <section className="py-16 bg-black text-center">
-      <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
+    <section className="py-16 bg-beige text-center">
+      <h2 className="text-3xl md:text-5xl font-bold text-gold mb-8">
         Choisissez votre expérience
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-12 ">
         {experiences.map((experience, index) => (
           <ExperienceCard key={index} experience={experience} />
         ))}

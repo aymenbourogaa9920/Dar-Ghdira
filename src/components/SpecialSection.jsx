@@ -11,13 +11,13 @@ export default function SpecialSection() {
   });
 
   return (
-    <section className="py-16 bg-black text-white">
+    <section className="py-16 bg-beige text-white">
       {/* Titre de la section */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 animate-fadeIn">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 animate-fadeIn text-gold">
           Nos <span className="text-gold">Services</span>
         </h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
+        <p className="text-charcoal max-w-2xl mx-auto">
           Découvrez nos services spécialisés pour vous offrir une expérience
           événementielle inoubliable.
         </p>

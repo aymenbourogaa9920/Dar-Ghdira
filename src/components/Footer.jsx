@@ -12,10 +12,10 @@ const Footer = () => {
   });
 
   return (
-    <animated.footer style={footerAnimation} className="bg-black text-white py-12 mt-16">
+    <animated.footer style={footerAnimation} className="bg-gray-200 text-white py-12 mt-16">
       <div className="container mx-auto text-center">
         {/* Message de Clôture */}
-        <p className="text-xl md:text-2xl mb-6">Merci de visiter notre site !</p>
+        <p className="text-xl md:text-2xl mb-6 text-black">Merci de visiter notre site !</p>
 
         {/* Liens vers les Réseaux Sociaux */}
         <div className="flex justify-center space-x-6 mb-6">
@@ -23,7 +23,7 @@ const Footer = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-2xl hover:text-yellow-500 transition duration-300"
+            className="text-gold text-2xl hover:text-yellow-500 transition duration-300"
           >
             <FaFacebookF />
           </a>
@@ -32,7 +32,7 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-2xl hover:text-yellow-500 transition duration-300"
+            className="text-gold text-2xl hover:text-yellow-500 transition duration-300"
           >
             <FaInstagram />
           </a>
@@ -40,7 +40,7 @@ const Footer = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-2xl hover:text-yellow-500 transition duration-300"
+            className="text-gold text-2xl hover:text-yellow-500 transition duration-300"
           >
             <FaTiktok />
           </a>
@@ -48,8 +48,8 @@ const Footer = () => {
 
         {/* Liens supplémentaires */}
         <div className="space-y-2">
-          <p className="text-sm md:text-base text-gray-400">© 2024 Votre Nom ou Entreprise. Tous droits réservés.</p>
-          <p className="text-sm md:text-base text-gray-400">
+          <p className="text-sm md:text-base text-charcoal">© 2024 Votre Nom ou Entreprise. Tous droits réservés.</p>
+          <p className="text-sm md:text-base text-charcoal">
             <a href="/privacy-policy" className="hover:text-yellow-500 transition duration-300">Politique de confidentialité</a> | 
             <a href="/terms-of-service" className="hover:text-yellow-500 transition duration-300"> Conditions d'utilisation</a>
           </p>

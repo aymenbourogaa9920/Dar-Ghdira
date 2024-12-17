@@ -20,12 +20,12 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-black text-white py-10">
+    <section className="bg-beige text-white py-10">
       <h2 className="text-4xl text-gold text-center font-bold mb-8 mt-20">
         Contactez-nous
       </h2>
 
-      <div className="max-w-lg mx-auto p-8 rounded-3xl shadow-xl bg-black border-2 border-gold">
+      <div className="max-w-lg mx-auto p-8 rounded-3xl shadow-xl bg-gray-500 border-2 border-gold">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Nom */}
           <div className="relative">

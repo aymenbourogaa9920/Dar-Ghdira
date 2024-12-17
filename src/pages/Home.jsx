@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <div>
         <Hero/>
-    {/* <SpecialSection /> */}
-    {/* <Testimonials /> */}
-    {/* <PricingCards /> */}
-    {/* <EventFeatures /> */}
-    {/* <UpcomingEvents /> */}
-    {/* <ExperienceSelector /> */}
+    <SpecialSection />
+    <Testimonials />
+    <PricingCards />
+    <EventFeatures />
+    <UpcomingEvents />
+    <ExperienceSelector />
     </div>
   )
 }

@@ -75,18 +75,18 @@ export default function UpcomingEvents() {
   });
 
   return (
-    <section className="py-16 bg-black text-center">
-      <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+    <section className="py-16 bg-beige text-center">
+      <h2 className="text-3xl md:text-5xl font-bold text-gold mb-4">
         Prochains Événements
       </h2>
-      <p className="text-gray-400 mb-8">Ne manquez pas nos événements à venir, préparez-vous à vivre des moments mémorables !</p>
+      <p className="text-charcoal mb-8">Ne manquez pas nos événements à venir, préparez-vous à vivre des moments mémorables !</p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-12">
         {events.map((event, index) => (
           <animated.div
             key={index}
             style={eventHoverAnimation}
-            className="relative bg-black text-white rounded-lg shadow-lg p-8 flex flex-col justify-center items-center transform transition duration-300 hover:scale-110 hover:shadow-2xl"
+            className="relative bg-black bg-opacity-70 text-white rounded-lg shadow-lg p-8 flex flex-col justify-center items-center transform transition duration-300 hover:scale-110 hover:shadow-2xl"
           >
             <div className="mb-4">
               {event.icon}

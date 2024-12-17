@@ -10,7 +10,7 @@ export default function VideoGallery() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   return (
-    <section className="bg-black text-white py-10">
+    <section className="bg-beige text-white py-10">
       <h2 className="text-3xl text-gold text-center font-bold mb-8">Galerie Vidéo</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
         {videos.map((video) => (

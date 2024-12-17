@@ -47,12 +47,12 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-16 bg-black text-white">
+    <section className="py-16 bg-beige text-white">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gold">
           Témoignages de nos clients
         </h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
+        <p className="text-charcoal max-w-2xl mx-auto">
           Découvrez ce que nos clients pensent de nos services.
         </p>
       </div>

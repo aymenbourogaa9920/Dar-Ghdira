@@ -12,8 +12,8 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section className="bg-black text-white py-10">
-      <h2 className="text-3xl text-gold text-center font-bold mb-8 mt-20">
+    <section className="bg-beige text-white py-10">
+      <h2 className="text-3xl text-gold text-center font-bold mb-20 mt-20">
         Galerie de Photos
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">

@@ -34,9 +34,9 @@ function App() {
     <Routes>
       {/* Route d'accueil */}
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<AboutPage />} />
+      {/* <Route path="/about" element={<AboutPage />} />
       <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/contact" element={<ContactForm />} />
+      <Route path="/contact" element={<ContactForm />} /> */}
     </Routes>
   
     <Footer />

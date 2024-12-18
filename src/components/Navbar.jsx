@@ -44,7 +44,7 @@ export default function Navbar () {
           </li>
           <li>
             <a
-              href='/about'
+              href='#'
               className='hover:text-gold transition duration-300'
             >
               À propos
@@ -52,7 +52,7 @@ export default function Navbar () {
           </li>
           <li>
             <a
-              href='/portfolio'
+              href='#'
               className='hover:text-gold transition duration-300'
             >
               Portfolio
@@ -60,7 +60,7 @@ export default function Navbar () {
           </li>
           <li>
             <a
-              href='/contact'
+              href='#'
               className='hover:text-gold transition duration-300'
             >
               Contact
@@ -96,21 +96,21 @@ export default function Navbar () {
           Accueil
         </a>
         <a
-          href='/about'
+          href='#'
           className='text-xl font-semibold text-light hover:text-gold transition duration-300'
           onClick={() => setIsMenuOpen(false)}
         >
           À propos
         </a>
         <a
-          href='/portfolio'
+          href='#'
           className='text-xl font-semibold text-light hover:text-gold transition duration-300'
           onClick={() => setIsMenuOpen(false)}
         >
           Portfolio
         </a>
         <a
-          href='/contact'
+          href='#'
           className='text-xl font-semibold text-light hover:text-gold transition duration-300'
           onClick={() => setIsMenuOpen(false)}
         >

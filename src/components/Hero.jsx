@@ -23,7 +23,7 @@ const Hero = () => {
         <Slider ref={sliderRef} {...settings}>
           <div className="relative">
             <img
-              src="./public/images/photo-1.jpg"
+              src="/images/photo-1.jpg"
               alt="Slide 1"
               className="w-full h-[500px] object-cover rounded-lg"
             />
@@ -36,7 +36,7 @@ const Hero = () => {
           </div>
           <div className="relative">
             <img
-              src="./public/images/photo-2.jpg"
+              src="/images/photo-2.jpg"
               alt="Slide 2"
               className="w-full h-[500px] object-cover rounded-lg"
             />
@@ -49,7 +49,7 @@ const Hero = () => {
           </div>
           <div className="relative">
             <img
-              src="./public/images/photo-3.jpg"
+              src="/images/photo-3.jpg"
               alt="Slide 3"
               className="w-full h-[500px] object-cover rounded-lg"
             />
@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
           <div className="relative">
             <img
-              src="./public/images/photo-4.jpg"
+              src="/images/photo-4.jpg"
               alt="Mariage élégant"
               className="w-full h-[500px] object-cover rounded-lg"
             />
@@ -75,7 +75,7 @@ const Hero = () => {
           </div>
           <div className="relative">
             <img
-              src="./public/images/photo-5.jpg"
+              src="/images/photo-5.jpg"
               alt="Cérémonie en plein air"
               className="w-full h-[500px] object-cover rounded-lg"
             />

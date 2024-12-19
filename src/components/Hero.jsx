@@ -1,95 +1,127 @@
-import React, { useState, useEffect } from "react";
-import { useTransition, animated } from "@react-spring/web";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export default function Hero() {
-  const images = [
-    // "logo.png",
-    "/images/photo-1.jpg",
-    "/images/photo-5.jpg",
-    "/images/photo-2.jpg",
-    "/images/photo-3.jpg",
-    "/images/photo-4.jpg",
-  ];
+const Hero = () => {
+  const sliderRef = React.useRef(null);
 
-  const [current, setCurrent] = useState(0);
-
-  // Précharger les images
-  useEffect(() => {
-    images.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, [images]);
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
+  const settings = {
+    infinite: true, // Boucle infinie
+    speed: 500, // Vitesse de transition
+    slidesToShow: 1, // Nombre d'éléments affichés à la fois
+    slidesToScroll: 1, // Nombre d'éléments défilés à chaque transition
+    autoplay: true, // Active le défilement automatique
+    autoplaySpeed: 3000, // Temps entre chaque défilement
+    arrows: false, // Désactive les flèches par défaut de react-slick
   };
-
-  const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const transitions = useTransition(current, {
-    key: current,
-    from: { opacity: 0, transform: "scale(1.05)" },
-    enter: { opacity: 1, transform: "scale(1)" },
-    leave: { opacity: 0, transform: "scale(0.95)" },
-    config: { tension: 280, friction: 30 },
-  });
 
   return (
-    <div className="relative w-full h-screen flex flex-col md:flex-row bg-beige">
-      {/* Section Carousel d'images */}
-      <div className="relative w-full md:w-1/2 h-1/2 md:h-full overflow-hidden">
-        {transitions((style, index) => (
-          <animated.div
-            key={index}
-            style={{
-              ...style,
-              backgroundImage: `url(${images[index]})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            className="absolute w-full h-full"
-          />
-        ))}
+    <div className="relative w-full h-screen bg-gray-100">
+      {/* Carousel */}
+      <div className="relative max-w-6xl mx-auto mt-32">
+        <Slider ref={sliderRef} {...settings}>
+          <div className="relative">
+            <img
+              src="./public/images/photo-1.jpg"
+              alt="Slide 1"
+              className="w-full h-[500px] object-cover rounded-lg"
+            />
+            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold text-gray-800">Éveillez vos événements</h2>
+              <p className="mt-2 text-gray-600">
+                Transformez vos rêves en réalité avec notre expertise.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <img
+              src="./public/images/photo-2.jpg"
+              alt="Slide 2"
+              className="w-full h-[500px] object-cover rounded-lg"
+            />
+            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold text-gray-800">Mariage élégant en plein air</h2>
+              <p className="mt-2 text-gray-600">
+                Faites de chaque moment une célébration unique.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <img
+              src="./public/images/photo-3.jpg"
+              alt="Slide 3"
+              className="w-full h-[500px] object-cover rounded-lg"
+            />
+            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold text-gray-800">Cérémonies mémorables</h2>
+              <p className="mt-2 text-gray-600">
+                Nos experts transforment vos idées en réalité.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <img
+              src="./public/images/photo-4.jpg"
+              alt="Mariage élégant"
+              className="w-full h-[500px] object-cover rounded-lg"
+            />
+            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold text-gray-800">Un mariage au style unique</h2>
+              <p className="mt-2 text-gray-600">
+                Faites de votre grand jour une célébration exceptionnelle avec nos solutions sur mesure et notre expertise en organisation.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <img
+              src="./public/images/photo-5.jpg"
+              alt="Cérémonie en plein air"
+              className="w-full h-[500px] object-cover rounded-lg"
+            />
+            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold text-gray-800">Célébrations en plein air</h2>
+              <p className="mt-2 text-gray-600">
+                Offrez à vos invités une expérience mémorable dans un cadre naturel enchanteur, idéal pour chaque occasion spéciale.
+              </p>
+            </div>
+          </div>
 
-        {/* Boutons pour naviguer */}
+        </Slider>
+
+        {/* Custom Buttons */}
         <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gold bg-opacity-80 p-3 rounded-full shadow-lg hover:bg-yellow transition duration-300"
+          onClick={() => sliderRef.current.slickPrev()}
+          className="absolute top-1/2 -translate-y-1/2 left-4 bg-gold text-white p-3 rounded-full hover:bg-black"
         >
-          <FaChevronLeft className="text-white text-xl" />
+          Prev
         </button>
         <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gold bg-opacity-80 p-3 rounded-full shadow-lg hover:bg-yellow transition duration-300"
+          onClick={() => sliderRef.current.slickNext()}
+          className="absolute top-1/2 -translate-y-1/2 right-4 bg-gold text-white p-3 rounded-full hover:bg-black"
         >
-          <FaChevronRight className="text-white text-xl" />
+          Next
         </button>
       </div>
 
-      {/* Section Texte */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-10 bg-beige">
-        <h1 className="text-3xl md:text-5xl font-bold text-black mb-6">
-          Éveillez vos événements avec <span className="text-gold">Dar Ghdira</span>
+      {/* Contenu déplacé sous le carousel */}
+      <div className="absolute bottom-15 left-1/2 transform -translate-x-1/2 text-center">
+        <h1 className="text-4xl font-bold text-gray-800">
+          Bienvenue à <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-black to-gold">Dar Ghdira</span>
         </h1>
-        <p className="text-lg text-charcoal leading-relaxed mb-4">
-          Votre événement mérite un cadre exceptionnel. Avec une attention minutieuse
-          portée à chaque détail, nous transformons vos rêves en réalité.
+
+        <p className="mt-4 text-lg text-gray-600">
+          Votre événement mérite un cadre exceptionnel. Avec une attention
+          minutieuse portée à chaque détail, nous transformons vos rêves en
+          réalité.
         </p>
-        <p className="text-lg text-charcoal leading-relaxed mb-8">
-          Prêts à commencer cette aventure ensemble ? Découvrez comment nous pouvons
-          donner vie à vos idées.
-        </p>
-        <a
-          href="#"
-          className="inline-block w-fit px-6 py-3 bg-gold text-white font-semibold rounded-md shadow-md hover:bg-paleYellow hover:text-charcoal transition duration-300"
-        >
-          Planifiez Votre Événement
-        </a>
+        <button className="mt-6 px-6 py-3 bg-gradient-to-r from-gold via-black to-gold text-white rounded-md">
+          Planifiez votre événement
+        </button>
+
       </div>
     </div>
   );
-}
+};
+
+export default Hero;

@@ -2,136 +2,96 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaRegSmileBeam } from "react-icons/fa"; // Icône pour un thème joyeux
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Hero = () => {
   const sliderRef = React.useRef(null);
 
   const settings = {
-    infinite: true, // Boucle infinie
-    speed: 500, // Vitesse de transition
-    slidesToShow: 1, // Nombre d'éléments affichés à la fois
-    slidesToScroll: 1, // Nombre d'éléments défilés à chaque transition
-    autoplay: true, // Active le défilement automatique
-    autoplaySpeed: 3000, // Temps entre chaque défilement
-    arrows: false, // Désactive les flèches par défaut de react-slick
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
   };
 
   return (
-    <div className="relative w-full h-screen bg-gray-100">
-      {/* Carousel */}
-      <div className="relative max-w-6xl mx-auto mt-32">
-        <Slider ref={sliderRef} {...settings}>
-          <div className="relative">
-            <img
-              src="/images/photo-1.jpg"
-              alt="Slide 1"
-              className="w-full h-[500px] object-cover rounded-lg"
-            />
-            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-gray-800">Éveillez vos événements</h2>
-              <p className="mt-2 text-gray-600">
-                Transformez vos rêves en réalité avec notre expertise.
-              </p>
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/images/photo-2.jpg"
-              alt="Slide 2"
-              className="w-full h-[500px] object-cover rounded-lg"
-            />
-            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-gray-800">Mariage élégant en plein air</h2>
-              <p className="mt-2 text-gray-600">
-                Faites de chaque moment une célébration unique.
-              </p>
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/images/photo-3.jpg"
-              alt="Slide 3"
-              className="w-full h-[500px] object-cover rounded-lg"
-            />
-            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-gray-800">Cérémonies mémorables</h2>
-              <p className="mt-2 text-gray-600">
-                Nos experts transforment vos idées en réalité.
-              </p>
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/images/photo-4.jpg"
-              alt="Mariage élégant"
-              className="w-full h-[500px] object-cover rounded-lg"
-            />
-            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-gray-800">Un mariage au style unique</h2>
-              <p className="mt-2 text-gray-600">
-                Faites de votre grand jour une célébration exceptionnelle avec nos solutions sur mesure et notre expertise en organisation.
-              </p>
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/images/photo-5.jpg"
-              alt="Cérémonie en plein air"
-              className="w-full h-[500px] object-cover rounded-lg"
-            />
-            <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-gray-800">Célébrations en plein air</h2>
-              <p className="mt-2 text-gray-600">
-                Offrez à vos invités une expérience mémorable dans un cadre naturel enchanteur, idéal pour chaque occasion spéciale.
-              </p>
-            </div>
-          </div>
+<div className="relative w-full h-screen bg-gray-100 pt-20 md:pt-24">
+<div className="grid grid-cols-1 md:grid-cols-2 items-center h-full">
+        {/* Colonne gauche : Carousel */}
+      
+        <div className="relative">
+          <Slider ref={sliderRef} {...settings}>
+            {[
+              {
+                img: "/images/photo-1.jpg",
+                title: "Éveillez vos événements",
+                description: "Transformez vos rêves en réalité avec notre expertise.",
+              },
+              {
+                img: "/images/photo-2.jpg",
+                title: "Mariage élégant en plein air",
+                description: "Faites de chaque moment une célébration unique.",
+              },
+              {
+                img: "/images/photo-3.jpg",
+                title: "Cérémonies mémorables",
+                description: "Nos experts transforment vos idées en réalité.",
+              },
+            ].map((slide, index) => (
+              <div key={index} className="relative">
+                <img
+                  src={slide.img}
+                  alt={slide.title}
+                  className="w-full h-[500px] object-cover rounded-lg"
+                />
+                <div className="absolute bottom-10 left-10 bg-white/80 p-4 rounded-lg shadow-md">
+                  <h2 className="text-2xl font-bold text-gray-800">{slide.title}</h2>
+                  <p className="mt-2 text-gray-600">{slide.description}</p>
+                </div>
+              </div>
+            ))}
+          </Slider>
 
-        </Slider>
+          {/* Custom Buttons */}
+          <button
+            onClick={() => sliderRef.current.slickPrev()}
+            className="absolute top-1/2 -translate-y-1/2 left-4 bg-transparent p-2 rounded-full hover:scale-110 hover:bg-white/10 transition-transform duration-300 flex items-center justify-center shadow-lg"
+          >
+            <span className="text-gray-50 text-3xl">❮</span>
+          </button>
+          <button
+            onClick={() => sliderRef.current.slickNext()}
+            className="absolute top-1/2 -translate-y-1/2 right-4 bg-transparent p-2 rounded-full hover:scale-110 hover:bg-white/10 transition-transform duration-300 flex items-center justify-center shadow-lg"
+          >
+            <span className="text-gray-50 text-3xl">❯</span>
+          </button>
+        </div>
+        {/* Colonne droite : Texte */}
+        <div className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-16 lg:px-24 space-y-6 text-center md:text-left">
+  {/* Titre principal */}
+  <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
+    Bienvenue à{" "}
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-black to-gold">
+      Dar Ghdira
+    </span>
+  </h1>
 
-       {/* Custom Buttons */}
-       <button
-          onClick={() => sliderRef.current.slickPrev()}
-          className="absolute top-1/2 -translate-y-1/2 left-4 bg-transparent p-2 rounded-t-full rounded-b-none hover:scale-110 hover:bg-white/10 transition-transform duration-300 flex items-center justify-center shadow-lg"
-          style={{
-            width: "70px",
-            height: "140px",
-            transformOrigin: "center bottom",
-          }}
-        >
-          <FaChevronLeft className="text-gray-50 text-3xl hover:scale-125 transition-transform duration-200" />
-        </button>
-        <button
-          onClick={() => sliderRef.current.slickNext()}
-          className="absolute top-1/2 -translate-y-1/2 right-4 bg-transparent p-2 rounded-t-none rounded-b-full hover:scale-110 hover:bg-white/10 transition-transform duration-300 flex items-center justify-center shadow-lg"
-          style={{
-            width: "70px",
-            height: "140px",
-            transformOrigin: "center top",
-          }}
-        >
-          <FaChevronRight className="text-gray-50 text-3xl hover:scale-125 transition-transform duration-200" />
-        </button>
-      </div>
+  {/* Description */}
+  <p className="text-base sm:text-lg md:text-xl text-gray-600">
+    Votre événement mérite un cadre exceptionnel. Avec une attention minutieuse
+    portée à chaque détail, nous transformons vos rêves en réalité.
+  </p>
 
-      {/* Contenu déplacé sous le carousel */}
-      <div className="absolute bottom-15 left-1/2 transform -translate-x-1/2 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">
-          Bienvenue à <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-black to-gold">Dar Ghdira</span>
-        </h1>
+  {/* Bouton dynamique avec animation 3D raffinée */}
+  <button className="mt-6 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-gold via-black to-gold text-white text-base sm:text-lg font-semibold rounded-lg shadow-2xl transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:bg-gradient-to-r hover:from-black hover:via-gold hover:to-black">
+    Planifiez votre événement
+  </button>
+</div>
 
-        <p className="mt-4 text-lg text-gray-600">
-          Votre événement mérite un cadre exceptionnel. Avec une attention
-          minutieuse portée à chaque détail, nous transformons vos rêves en
-          réalité.
-        </p>
-        <button className="mt-6 px-6 py-3 bg-gradient-to-r from-gold via-black to-gold text-white rounded-md">
-          Planifiez votre événement
-        </button>
 
+      
       </div>
     </div>
   );

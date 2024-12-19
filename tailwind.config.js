@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        gold: "#BB9029",       // Doré
+        gold: "#ffc300",       // Doré
         lightGold: "#CAAA35",  // Or plus clair
         beige: "#f5ebe0",      // Beige doux pour fonds
         lavender: "#6A5ACD",   // Bleu lavande lumineux pour titres
@@ -14,7 +14,7 @@ export default {
         yellow: "#FFD700",     // Jaune doré pour les boutons
         paleYellow: "#FFEC8B", // Jaune pastel pour hover
         skyBlue: "#87CEFA",    // Bleu ciel pour accents ou icônes
-        black: "#000000",      // Noir pour fond ou texte
+        black: "#000814",      // Noir pour fond ou texte
         white: "#FFFFFF",      // Blanc classique
       },
     },

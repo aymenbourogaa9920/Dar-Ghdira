@@ -8,7 +8,7 @@ export default {
       colors: {
         gold: "#BB9029",       // Doré
         lightGold: "#CAAA35",  // Or plus clair
-        beige: "#FDF8E8",      // Beige doux pour fonds
+        beige: "#f5ebe0",      // Beige doux pour fonds
         lavender: "#6A5ACD",   // Bleu lavande lumineux pour titres
         charcoal: "#4A4A4A",   // Gris doux pour le texte
         yellow: "#FFD700",     // Jaune doré pour les boutons

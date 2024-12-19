@@ -2,6 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaRegSmileBeam } from "react-icons/fa"; // Icône pour un thème joyeux
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Hero = () => {
   const sliderRef = React.useRef(null);
@@ -89,18 +92,28 @@ const Hero = () => {
 
         </Slider>
 
-        {/* Custom Buttons */}
-        <button
+       {/* Custom Buttons */}
+       <button
           onClick={() => sliderRef.current.slickPrev()}
-          className="absolute top-1/2 -translate-y-1/2 left-4 bg-gold text-white p-3 rounded-full hover:bg-black"
+          className="absolute top-1/2 -translate-y-1/2 left-4 bg-transparent p-2 rounded-t-full rounded-b-none hover:scale-110 hover:bg-white/10 transition-transform duration-300 flex items-center justify-center shadow-lg"
+          style={{
+            width: "70px",
+            height: "140px",
+            transformOrigin: "center bottom",
+          }}
         >
-          Prev
+          <FaChevronLeft className="text-gray-50 text-3xl hover:scale-125 transition-transform duration-200" />
         </button>
         <button
           onClick={() => sliderRef.current.slickNext()}
-          className="absolute top-1/2 -translate-y-1/2 right-4 bg-gold text-white p-3 rounded-full hover:bg-black"
+          className="absolute top-1/2 -translate-y-1/2 right-4 bg-transparent p-2 rounded-t-none rounded-b-full hover:scale-110 hover:bg-white/10 transition-transform duration-300 flex items-center justify-center shadow-lg"
+          style={{
+            width: "70px",
+            height: "140px",
+            transformOrigin: "center top",
+          }}
         >
-          Next
+          <FaChevronRight className="text-gray-50 text-3xl hover:scale-125 transition-transform duration-200" />
         </button>
       </div>
 

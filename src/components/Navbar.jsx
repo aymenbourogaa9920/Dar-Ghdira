@@ -22,7 +22,7 @@ export default function Navbar () {
 
   return (
     // className="navbar h-16 bg-white fixed top-0 left-0 w-full z-10 shadow-md"
-<nav className="navbar fixed top-0 left-0 w-full bg-gray-100 bg-opacity-90 z-50 shadow-md">
+<nav className="navbar fixed top-0 left-0 w-full bg-black bg-opacity-90 z-50 shadow-md">
 <div className='container mx-auto px-4 py-3 flex items-center justify-between'>
         {/* Logo animé */}
         <animated.div style={logoAnimation}>
@@ -36,16 +36,16 @@ export default function Navbar () {
         </animated.div>
 
         {/* Menu Desktop */}
-        <ul className='hidden md:flex space-x-8 text-charcoal'>
+        <ul className='hidden md:flex space-x-8 text-colors-gold-gradient-from'>
           <li>
-            <a href='/' className='hover:text-gold transition duration-300'>
+            <a href='/' className='hover:text-white transition duration-300'>
               Accueil
             </a>
           </li>
           <li>
             <a
               href='#'
-              className='hover:text-gold transition duration-300'
+              className='hover:text-white transition duration-300'
             >
               À propos
             </a>
@@ -53,7 +53,7 @@ export default function Navbar () {
           <li>
             <a
               href='#'
-              className='hover:text-gold transition duration-300'
+              className='hover:text-white transition duration-300'
             >
               Portfolio
             </a>
@@ -61,7 +61,7 @@ export default function Navbar () {
           <li>
             <a
               href='#'
-              className='hover:text-gold transition duration-300'
+              className='hover:text-white transition duration-300'
             >
               Contact
             </a>
@@ -71,13 +71,13 @@ export default function Navbar () {
         {/* Bouton Menu Burger pour Mobile */}
         <div className='md:hidden z-50'>
           <button
-            className='text-gold focus:outline-none'
+            className='text-white focus:outline-none'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <FaTimes className='w-8 h-8 text-gold' />
+              <FaTimes className='w-8 h-8 text-white' />
             ) : (
-              <FaBars className='w-8 h-8 text-gold' />
+              <FaBars className='w-8 h-8 text-white' />
             )}
           </button>
         </div>
@@ -90,28 +90,28 @@ export default function Navbar () {
       >
         <a
           href='/'
-          className='text-xl font-semibold text-light hover:text-gold transition duration-300'
+          className='text-xl font-semibold text-light hover:text-white transition duration-300'
           onClick={() => setIsMenuOpen(false)}
         >
           Accueil
         </a>
         <a
           href='#'
-          className='text-xl font-semibold text-light hover:text-gold transition duration-300'
+          className='text-xl font-semibold text-light hover:text-white transition duration-300'
           onClick={() => setIsMenuOpen(false)}
         >
           À propos
         </a>
         <a
           href='#'
-          className='text-xl font-semibold text-light hover:text-gold transition duration-300'
+          className='text-xl font-semibold text-light hover:text-white transition duration-300'
           onClick={() => setIsMenuOpen(false)}
         >
           Portfolio
         </a>
         <a
           href='#'
-          className='text-xl font-semibold text-light hover:text-gold transition duration-300'
+          className='text-xl font-semibold text-light hover:text-white transition duration-300'
           onClick={() => setIsMenuOpen(false)}
         >
           Contact

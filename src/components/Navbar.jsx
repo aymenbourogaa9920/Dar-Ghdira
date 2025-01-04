@@ -22,7 +22,7 @@ export default function Navbar () {
 
   return (
     // className="navbar h-16 bg-white fixed top-0 left-0 w-full z-10 shadow-md"
-<nav className="navbar fixed top-0 left-0 w-full bg-black bg-opacity-90 z-50 shadow-md">
+<nav className="navbar fixed top-0 left-0 w-full bg-[#000000d0]  z-50 shadow-md">
 <div className='container mx-auto px-4 py-3 flex items-center justify-between'>
         {/* Logo animé */}
         <animated.div style={logoAnimation}>
@@ -36,7 +36,7 @@ export default function Navbar () {
         </animated.div>
 
         {/* Menu Desktop */}
-        <ul className='hidden md:flex space-x-8 text-colors-gold-gradient-from'>
+        <ul className='hidden md:flex space-x-8 text-[#CDCAC3]'>
           <li>
             <a href='/' className='hover:text-white transition duration-300'>
               Accueil

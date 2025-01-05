@@ -6,18 +6,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        gold: "#FFD700",
-        charcoal: "#1c1c1c",
-        "light-charcoal": "#202020",
-        "dark-gray": "#1c1c1c",
-
-      },
-      backgroundImage: {
-        "gold-gradient": "linear-gradient(to right, #F0E4B6, #D5B983, #B38A53, #6C3D11)",
-        "dark-3d-gradient": "linear-gradient(180deg, #212224, #060608)",
-
-        "charcoal-gradient": "linear-gradient(180deg, #333333, #1c1c1c)",
-
+        charcoal: {
+          gradient: "#000000c1", // Exemple de couleur pour un gradient
+        },
+        gold: {
+          light: "#FCD895",
+          medium: "#5F4421",
+          dark: "#54391C",
+          deep: "#8B6331",
+        },
+        text: {
+          highlight: "#D5B983",
+          gray: "#gray-400",
+        },
       },
     },
   },

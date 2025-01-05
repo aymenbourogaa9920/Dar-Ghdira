@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <Routes>
       {/* Route d'accueil */}
       <Route path="/" element={<Home />} />

@@ -44,14 +44,14 @@ const Hero = () => {
         backgroundColor: "black"
       }}
     >
-   {/* Section principale avec image de fond */}
-<div
+  
+{/* <div
   className="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center"
   style={{
     backgroundImage: "url('/cover/cover-4.jpeg')", // Chemin vers votre image
   }}
 >
-  {/* Section gauche : Texte et bouton */}
+ 
   <div className="w-full md:w-1/2 px-8 md:px-26 bg-black bg-opacity-50 rounded-lg p-6">
     <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFE998] to-[#57370D]">
       Vivez des moments inoubliables
@@ -61,23 +61,23 @@ const Hero = () => {
       Faites confiance à notre expertise pour des événements mémorables.
     </p>
     <button className="relative mt-6 px-6 py-3 rounded-lg bg-black text-transparent bg-clip-text bg-gradient-to-r from-[#FFE998] to-[#57370D] border-2 border-dashed border-transparent text-xl font-semibold shadow-md transition-all duration-300 hover:scale-105">
-        {/* Bordure en dégradé */}
+       
         <span className="absolute inset-0 rounded-lg border-2 border-dashed border-colors-gold-gradient-from  bg-black animate-gradient-move pointer-events-none text-transparent bg-clip-text bg-gradient-to-r from-[#FFE998] to-[#57370D]"></span>
         
-        {/* Contenu du bouton */}
+       
         <span className="relative z-10 flex items-center justify-center space-x-2 text-transparent bg-clip-text bg-gradient-to-r from-[#FFE998] to-[#57370D]">
           <span>Découvrez nos services</span>
-          {/* Flèche animée */}
+         
           <FiArrowRight className="text-[#FFE998] text-2xl transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </button>
 
 
   </div>
-</div>
+</div> */}
 
       {/* Right Section: Carousel */}
-      <div className="w-full md:w-1/2 h-full">
+      <div className="w-full md:w-full h-full">
         <Slider ref={sliderRef} {...settings} className="h-full">
           {slides.map((slide, index) => (
             <div key={index} className="relative w-full h-screen">

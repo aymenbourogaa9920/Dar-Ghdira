@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react'
 import styles from './landing.module.css' // Import du fichier CSS module
 import { GiHamburgerMenu } from 'react-icons/gi' // Import de l'icône Hamburger
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+
 
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

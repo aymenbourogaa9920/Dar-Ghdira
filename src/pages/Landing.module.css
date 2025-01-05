@@ -28,3 +28,53 @@
 .sliderDelay1000 {
   animation-delay: 10s; /* Délai ajusté */
 }
+
+@keyframes textAnimation {
+  0% {
+    background-position: -200%;
+  }
+  50% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}
+
+.button {
+  padding: 12px 32px;
+  background-color: black;
+  color: transparent;
+  background: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53);
+  font-weight: bold;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background-clip: text;
+  border-image: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53) 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-width: 4px;
+  border-style: dotted;
+  border-image: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53) 1;
+  color: transparent;
+  background: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53);
+  background-size: 400%;
+  background-clip: text;
+  animation: textAnimation 3s linear infinite;
+}
+
+.gradient-icon {
+  -webkit-mask-image: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53); /* Gradient custom */
+  mask-image: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53);
+  fill: transparent; /* Make sure the fill is transparent to use the gradient */
+}
+
+/* Ombre noire moins claire avec arrondi en bas */
+.parapluie-slider {
+  border-radius: 0 0 200px 200px; /* Forme arrondie comme un parapluie */
+ 
+  overflow: hidden;
+}

@@ -11,11 +11,11 @@ export default function SpecialSection() {
   });
 
   return (
-    <section className="py-16 bg-black text-white">
+    <section className="py-16 bg-neutral-900 text-white">
       {/* Titre de la section */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 animate-fadeIn text-gold">
-          Nos <span className="text-gold">Services</span>
+        <h2 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-medium to-gold-light mb-4">
+          Nos Services
         </h2>
         <p className="text-charcoal max-w-2xl mx-auto">
           Découvrez nos services spécialisés pour vous offrir une expérience
@@ -28,7 +28,7 @@ export default function SpecialSection() {
         {/* Carte 1 */}
         <animated.div
           style={fadeInAnimation}
-          className="bg-black bg-opacity-50 p-6 rounded-lg text-center shadow-lg hover:scale-110 transform hover:rotate-3d hover:shadow-2xl transition duration-500"
+          className=" bg-gradient-to-r from-gold-light via-gold-medium to-gold-deep p-6 rounded-lg text-center shadow-lg hover:scale-110 transform hover:rotate-3d hover:shadow-2xl transition duration-500"
         >
           <FaRegCalendarAlt className="text-gold text-5xl mx-auto mb-4" />
           <h3 className="text-2xl font-semibold mb-2">Organisation d'Événements</h3>
@@ -41,7 +41,7 @@ export default function SpecialSection() {
         {/* Carte 2 */}
         <animated.div
           style={fadeInAnimation}
-          className="bg-black bg-opacity-50 p-6 rounded-lg text-center shadow-lg hover:scale-110 transform hover:rotate-3d hover:shadow-2xl transition duration-500"
+          className="bg-gradient-to-r from-gold-light via-gold-medium to-gold-deep p-6 rounded-lg text-center shadow-lg hover:scale-110 transform hover:rotate-3d hover:shadow-2xl transition duration-500"
         >
           <FaPaintBrush className="text-gold text-5xl mx-auto mb-4" />
           <h3 className="text-2xl font-semibold mb-2">Décoration</h3>
@@ -53,7 +53,7 @@ export default function SpecialSection() {
         {/* Carte 3 */}
         <animated.div
           style={fadeInAnimation}
-          className="bg-black bg-opacity-50 p-6 rounded-lg text-center shadow-lg hover:scale-110 transform hover:rotate-3d hover:shadow-2xl transition duration-500"
+          className="bg-gradient-to-r from-gold-light via-gold-medium to-gold-deep p-6 rounded-lg text-center shadow-lg hover:scale-110 transform hover:rotate-3d hover:shadow-2xl transition duration-500"
         >
           <FaHandshake className="text-gold text-5xl mx-auto mb-4" />
           <h3 className="text-2xl font-semibold mb-2">Services Personnalisés</h3>

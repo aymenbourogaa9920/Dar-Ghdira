@@ -1,0 +1,70 @@
+/* specialSection.module.css */
+
+.eventSection {
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: black;
+    color: transparent;
+    background: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53);
+    background-clip: text;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53) 1;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .eventSection:hover {
+    transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+    border-width: 4px;
+    border-style: dotted;
+    border-image: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53) 1;
+    background: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53);
+    background-clip: text;
+    animation: textAnimation 3s linear infinite;
+  }
+  
+  .icon {
+    font-size: 3rem;
+    margin: 0 auto;
+    display: block;
+    color: #F0E4B6;
+    animation: bounce 1.5s infinite ease-in-out;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #F0E4B6, #D5B983, #B38A53);
+    background-clip: text;
+    color: transparent;
+    animation: textAnimation 3s linear infinite;
+  }
+  
+  .description {
+    
+    color: white;
+    animation: textAnimation 3s linear infinite;
+  }
+  
+  /* Animation du texte */
+  @keyframes textAnimation {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+  
+  /* Animation de rebond pour l'icône */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  

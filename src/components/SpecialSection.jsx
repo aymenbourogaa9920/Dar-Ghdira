@@ -11,8 +11,10 @@ export default function SpecialSection() {
   });
 
   return (
-    <section className="py-16 bg-neutral-900 text-white">
+    <div className='bg-charcoal-gradient  text-white relative overflow-hidden'>
+    <section className="py-16 bg-black text-white">
       {/* Titre de la section */}
+      
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-medium to-gold-light mb-4">
           Nos Services
@@ -32,7 +34,7 @@ export default function SpecialSection() {
         >
           <FaRegCalendarAlt className="text-gold text-5xl mx-auto mb-4" />
           <h3 className="text-2xl font-semibold mb-2">Organisation d'Événements</h3>
-          <p className="text-gray-300">
+          <p className="text-charcoal">
             Planification complète pour tous vos événements : mariages, fêtes,
             conférences, etc.
           </p>
@@ -45,7 +47,7 @@ export default function SpecialSection() {
         >
           <FaPaintBrush className="text-gold text-5xl mx-auto mb-4" />
           <h3 className="text-2xl font-semibold mb-2">Décoration</h3>
-          <p className="text-gray-300">
+          <p className="text-charcoal">
             Création de décors uniques pour sublimer vos événements et leur donner un charme exceptionnel.
           </p>
         </animated.div>
@@ -57,11 +59,22 @@ export default function SpecialSection() {
         >
           <FaHandshake className="text-gold text-5xl mx-auto mb-4" />
           <h3 className="text-2xl font-semibold mb-2">Services Personnalisés</h3>
-          <p className="text-gray-300">
+          <p className="text-charcoal">
             Des solutions adaptées à vos besoins, conçues spécialement pour vous satisfaire.
           </p>
         </animated.div>
       </div>
+    
     </section>
+    {/* Gold Animation */}
+    <div
+        className='absolute top-0 left-0 opacity-60'
+        style={{
+          width: '200px',
+          height: '200px',
+          backgroundImage: "url('/animated-hearts.svg')"
+        }}
+      ></div>
+    </div>
   );
 }

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Premier cœur -->
+  <path
+    d="M20,30 C20,27 18,25 15,25 C10,25 10,32 15,35 C17,37 20,40 20,40 C20,40 23,37 25,35 C30,32 30,25 25,25 C22,25 20,27 20,30"
+    stroke="#D4AF37" 
+    stroke-width="1" 
+    fill="transparent">
+    <animate attributeName="transform" 
+             type="translate" 
+             from="0 0" 
+             to="0 120" 
+             dur="3s" 
+             repeatCount="indefinite" />
+    <animate attributeName="fill-opacity" 
+             from="0" 
+             to="1" 
+             dur="2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="fill" 
+             from="transparent" 
+             to="#D4AF37" 
+             dur="2s" 
+             repeatCount="indefinite" />
+  </path>
+
+  <!-- Deuxième cœur -->
+  <path
+    d="M100,50 C100,47 98,45 95,45 C90,45 90,52 95,55 C97,57 100,60 100,60 C100,60 103,57 105,55 C110,52 110,45 105,45 C102,45 100,47 100,50"
+    stroke="#D4AF37" 
+    stroke-width="1" 
+    fill="transparent">
+    <animate attributeName="transform" 
+             type="translate" 
+             from="0 0" 
+             to="-50 0" 
+             dur="2.5s" 
+             repeatCount="indefinite" />
+    <animate attributeName="fill-opacity" 
+             from="0" 
+             to="1" 
+             dur="2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="fill" 
+             from="transparent" 
+             to="#D4AF37" 
+             dur="2s" 
+             repeatCount="indefinite" />
+  </path>
+
+  <!-- Troisième cœur -->
+  <path
+    d="M150,150 C150,147 148,145 145,145 C140,145 140,152 145,155 C147,157 150,160 150,160 C150,160 153,157 155,155 C160,152 160,145 155,145 C152,145 150,147 150,150"
+    stroke="#D4AF37" 
+    stroke-width="1" 
+    fill="transparent">
+    <animate attributeName="transform" 
+             type="scale" 
+             from="1" 
+             to="2" 
+             dur="1.5s" 
+             repeatCount="indefinite" />
+    <animate attributeName="fill-opacity" 
+             from="0" 
+             to="1" 
+             dur="2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="fill" 
+             from="transparent" 
+             to="#D4AF37" 
+             dur="2s" 
+             repeatCount="indefinite" />
+  </path>
+</svg>

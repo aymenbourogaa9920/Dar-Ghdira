@@ -17,8 +17,8 @@ export default function SpecialSection() {
       {/* Titre de la section */}
       
       <div className="text-center mb-12 ">
-        <h2 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold-medium to-gold-deep mb-4">
-          Nos Services
+        <h2 className="text-4xl md:text-6xl font-extrabold  mb-4">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold-medium to-gold-deep">Nos</span>   <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold-medium to-gold-deep">Services</span>
         </h2>
         <p className="text-charcoal max-w-2xl mx-auto">
           Découvrez nos services spécialisés pour vous offrir une expérience
